@@ -14,7 +14,7 @@ function App() {
         <Router>
           <Routes>
             <Route
-              path="/Disbursement"
+              path="/"
               exact
               element={<DisbursementApproval />}
             />

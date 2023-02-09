@@ -15,41 +15,105 @@ const Menubar = () => {
         </div>
         <ul className="nav-links">
           <li className={activeLink === 1 ? "active" : ""}>
-            <a href="#" onClick={() => handleLinkClick(1)}>
+            <a
+              href="#"
+              onClick={(event) => {
+                event.preventDefault();
+                handleLinkClick(1);
+              }}
+            >
               <i className="bx bx-square"></i>
               <span className="link_name">กลับเมนูหลัก</span>
             </a>
           </li>
-          <li className={activeLink === 2 ? "active" : "activeMain"}>
+          <li
+            className={
+              activeLink === 2 || (activeLink > 2 && activeLink < 10)
+                ? "active"
+                : "activeMain"
+            }
+          >
             <a href="#" onClick={() => handleLinkClick(2)}>
               <i className="bx bx-square"></i>
               <span className="link_name">งานบริหารทรัพย์สิน</span>
             </a>
           </li>
           <ul className="sub-menu">
-            <li>
-              <a href="#">Dashboard</a>
+            <li className={activeLink === 3 ? "active" : ""}>
+              <a
+                href="#"
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleLinkClick(3);
+                }}
+              >
+                Dashboard
+              </a>
             </li>
-            <li>
-              <a href="#">ข้อมูลครุภัณฑ์</a>
+            <li className={activeLink === 4 ? "active" : ""}>
+              <a
+                href="#"
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleLinkClick(4);
+                }}
+              >
+                ข้อมูลครุภัณฑ์
+              </a>
             </li>
-            <li>
-              <a href="#">ข้อมูลครุภัณฑ์เป็นชุด</a>
+            <li className={activeLink === 5 ? "active" : ""}>
+              <a
+                href="#"
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleLinkClick(5);
+                }}
+              >
+                ข้อมูลครุภัณฑ์เป็นชุด
+              </a>
             </li>
-            <li>
-              <a href="/">
+            <li className={activeLink === 6 ? "active" : ""}>
+              <a
+                href="/"
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleLinkClick(6);
+                }}
+              >
                 <span>เบิกครุภัณฑ์</span>
               </a>
             </li>
             <ul className="sub-menu-list">
-              <li>
-                <a href="#">รายการเบิกจ่ายครุภัณฑ์</a>
+              <li className={activeLink === 7 ? "active" : ""}>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    handleLinkClick(7);
+                  }}
+                >
+                  รายการเบิกจ่ายครุภัณฑ์
+                </a>
               </li>
-              <li className={activeLink === 22 ? "active" : ""}>
-                <a href="#" onClick={() => handleLinkClick(22)}>บันทึกเบิกจ่ายครุภัณฑ์</a>
+              <li className={activeLink === 8 ? "active" : ""}>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    handleLinkClick(8);
+                  }}
+                >
+                  บันทึกเบิกจ่ายครุภัณฑ์
+                </a>
               </li>
-              <li className={activeLink === 23 ? "active" : ""}>
-                <a href="/Disbursement" onClick={() => handleLinkClick(23)}>
+              <li className={activeLink === 9 ? "active" : ""}>
+                <a
+                  href="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    handleLinkClick(9);
+                  }}
+                >
                   อนุมัติเบิกจ่ายครุภัณฑ์
                 </a>
               </li>
